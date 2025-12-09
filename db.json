@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "selim",
+      "password": "password",
+      "fullName": "Sistem Yöneticisi",
+      "role": "admin",
+      "bio": "Blog yöneticisi."
+    },
+    {
+      "id": "6621",
+      "username": "selim_wb",
+      "password": "password",
+      "fullName": "Selim",
+      "bio": "",
+      "role": "user"
+    }
+  ],
+  "posts": [
+    {
+      "id": "a7c0",
+      "title": "Yapay Zeka Günlük Hayatımızı Nasıl Değiştiriyor?",
+      "content": "Yapay zeka (AI), artık sadece bilim kurgu filmlerinin bir parçası değil, cebimizdeki telefonlardan evimizdeki akıllı asistanlara kadar her yerde. Algoritmalar, alışveriş alışkanlıklarımızı analiz ederek bize öneriler sunuyor, navigasyon uygulamaları trafiği tahmin ediyor ve hatta yazdığımız e-postaları tamamlıyor. Bu teknoloji, sessizce ama derinden günlük rutinlerimize entegre olmuş durumda.\n\nGelecekte yapay zekanın sağlık sektöründe teşhis koyma hızını artırması ve otonom araçlarla ulaşımı tamamen değiştirmesi bekleniyor. Ancak bu hızlı gelişim, veri gizliliği ve etik tartışmalarını da beraberinde getiriyor. Teknolojiyi benimserken, onun getirdiği sorumlulukların da farkında olmamız gerekiyor.",
+      "author": "selim",
+      "date": "2025-12-08T14:29:31.175Z",
+      "images": [
+        "/media/ai.jpg",
+        "/media/ai2.jpg",
+        "/media/ai3.jpg"
+      ]
+    },
+    {
+      "id": "98fb",
+      "title": "Bulut Bilişim Neden Şirketlerin Vazgeçilmezi?",
+      "content": "Eskiden veriler fiziksel sunucu odalarında saklanırken, günümüzde \"bulut\" teknolojisi sayesinde internetin olduğu her yerden erişilebilir hale geldi. AWS, Azure ve Google Cloud gibi platformlar, şirketlerin devasa donanım maliyetlerinden kurtulmasını ve ihtiyaç duydukları anda kaynaklarını ölçeklendirebilmesini sağlıyor. Bu esneklik, start-up'lardan dev holdinglere kadar herkes için oyunun kurallarını değiştirdi.\n\nBulut bilişimin sağladığı en büyük avantajlardan biri de iş sürekliliği ve felaket kurtarma senaryolarıdır. Fiziksel bir arıza durumunda verilerin yedekli sunucularda güvende olması, veri kaybı riskini minimize ediyor. Şirketler artık altyapı yönetmek yerine, bu teknoloji sayesinde inovasyona odaklanabiliyorlar.",
+      "author": "selim",
+      "date": "2025-12-08T14:29:47.857Z",
+      "images": [
+        "/media/cloud.jpg",
+        "/media/cloud2.png"
+      ]
+    },
+    {
+      "id": "2cb6",
+      "title": "Blockchain: Kripto Paraların Ötesindeki Teknoloji",
+      "content": "Blockchain denildiğinde akla ilk gelen Bitcoin olsa da, bu teknolojinin potansiyeli finansal işlemlerle sınırlı değil. Merkeziyetsiz, şeffaf ve değiştirilemez bir kayıt defteri sunan blockchain, tedarik zinciri yönetiminden dijital kimlik doğrulamaya kadar pek çok alanda kullanılıyor. Aracıları ortadan kaldırması, işlemleri daha güvenli ve düşük maliyetli hale getiriyor.\n\nÖzellikle \"Akıllı Sözleşmeler\" (Smart Contracts), belirli koşullar sağlandığında kendiliğinden gerçekleşen anlaşmalar sunarak hukuk ve emlak sektörlerinde devrim yaratabilir. Gelecekte tapu kayıtlarından telif haklarına kadar her şeyin blockchain üzerinde tutulduğu bir dünyaya doğru ilerliyoruz.",
+      "author": "selim",
+      "date": "2025-12-08T14:30:37.238Z",
+      "images": [
+        "/media/blockchain.webp",
+        "/media/blockchain.jpg"
+      ]
+    },
+    {
+      "id": "c02d",
+      "title": "Python Neden Dünyanın En Popüler Yazılım Dili?",
+      "content": "Yazılım dünyasına yeni adım atanların da, deneyimli veri bilimcilerin de ortak noktası genellikle Python oluyor. Sade ve okunabilir sözdizimi (syntax) sayesinde öğrenmesi oldukça kolay olan bu dil, aynı zamanda arkasındaki devasa kütüphane desteğiyle çok güçlü işler başarabiliyor. Web geliştirmeden yapay zeka projelerine kadar çok geniş bir kullanım alanı var.\n\nPython'un bu kadar popüler olmasının bir diğer nedeni de güçlü topluluk desteğidir. Karşılaştığınız hemen hemen her hata için internette bir çözüm bulabilir, açık kaynak kodlu projelerden faydalanabilirsiniz. Teknoloji devlerinin de ana dillerinden biri olması, Python'un tahtını uzun süre koruyacağını gösteriyor.",
+      "author": "selim",
+      "date": "2025-12-08T14:30:50.491Z",
+      "images": [
+        "/media/python.jpg",
+        "/media/python2.png"
+      ]
+    },
+    {
+      "id": "a3dd",
+      "title": "Giyilebilir Teknoloji ve Sağlık Takibi",
+      "content": "Akıllı saatler ve bileklikler artık sadece adım saymakla kalmıyor; kalp ritmimizi, kandaki oksijen seviyemizi ve uyku kalitemizi anlık olarak takip ediyor. Bu veriler, kullanıcıların sağlık durumları hakkında farkındalık kazanmasını sağlarken, olası sağlık sorunlarının erken teşhis edilmesine de yardımcı olabiliyor. Teknoloji, kişisel doktorumuz haline geliyor.\n\nGelecekte giyilebilir teknolojilerin daha da küçülerek akıllı yüzüklere hatta lenslere entegre edilmesi bekleniyor. Bu cihazların topladığı büyük veri (Big Data), tıbbi araştırmalar için eşsiz bir kaynak oluşturarak hastalıkların tedavisinde yeni yöntemlerin geliştirilmesine önayak olabilir.",
+      "author": "selim",
+      "date": "2025-12-08T14:31:34.287Z",
+      "images": [
+        "/media/wearable.webp",
+        "/media/wearable.avif"
+      ]
+    },
+    {
+      "id": "c3bc",
+      "title": "Otonom Araçlar ve Ulaşımın Geleceği",
+      "content": "Tesla ve Google gibi devlerin öncülük ettiği otonom (sürücüsüz) araç teknolojisi, ulaşım anlayışımızı kökten değiştirmeye hazırlanıyor. Karmaşık sensörler, kameralar ve yapay zeka algoritmaları sayesinde araçlar, insan müdahalesi olmadan trafikte yol alabiliyor. Bu teknolojinin nihai amacı, insan hatasından kaynaklanan trafik kazalarını sıfıra indirmek.\n\nOtonom araçların yaygınlaşması, sadece sürüş güvenliğini değil, şehir planlamasını da etkileyecek. Park yeri ihtiyacının azalması ve araç sahipliği yerine \"hizmet olarak ulaşım\" modelinin benimsenmesi, şehirlerin daha yaşanabilir hale gelmesini sağlayabilir. Ancak yasal düzenlemeler ve etik ikilemler, bu sürecin önündeki en büyük engeller.",
+      "author": "selim",
+      "date": "2025-12-08T14:31:47.662Z",
+      "images": [
+        "/media/otonom.jpg",
+        "/media/otonom2.jpg"
+      ]
+    },
+    {
+      "id": "2701",
+      "title": "Kuantum Bilgisayarlar: İşlem Gücünde Yeni Çağ",
+      "content": "Geleneksel bilgisayarlar 0 ve 1'lerden oluşan bitlerle çalışırken, kuantum bilgisayarlar \"kübit\" adı verilen ve aynı anda hem 0 hem de 1 olabilen birimler kullanır. Bu özellik, kuantum bilgisayarların günümüzün en güçlü süper bilgisayarlarının bile binlerce yılda çözebileceği problemleri saniyeler içinde çözmesini sağlar.\n\nHenüz laboratuvar aşamasında ve çok pahalı olsalar da, kuantum bilgisayarlar ilaç geliştirme, malzeme bilimi ve şifreleme alanlarında devrim yaratacak potansiyele sahip. Bu teknoloji olgunlaştığında, mevcut şifreleme yöntemlerinin kırılması gibi güvenlik riskleri doğsa da, bilimsel keşiflerin hızı inanılmaz derecede artacak.",
+      "author": "selim",
+      "date": "2025-12-08T14:31:58.220Z",
+      "images": [
+        "/media/quantum.jpg",
+        "/media/quantum2.jpeg"
+      ]
+    },
+    {
+      "id": "e34b",
+      "title": "Sürdürülebilir Teknoloji ve Yeşil Enerji",
+      "content": "Teknoloji geliştikçe enerji ihtiyacı da artıyor, bu da çevre üzerinde baskı oluşturuyor. Ancak \"Yeşil Teknoloji\" (Green Tech), karbon ayak izini azaltmayı hedefleyen yenilikçi çözümler sunuyor. Güneş panellerinin verimliliğinin artması, elektrikli araç bataryalarının gelişimi ve veri merkezlerinin soğutulmasında kullanılan çevre dostu yöntemler bu alandaki en önemli adımlar.\n\nTüketicilerin de çevre bilincinin artmasıyla, şirketler geri dönüştürülebilir malzemelerden üretilen telefonlar ve bilgisayarlar tasarlamaya başladı. Teknoloji, iklim kriziyle mücadelede hem sorunun bir parçası hem de çözümün en büyük anahtarı konumunda.",
+      "author": "selim",
+      "date": "2025-12-08T14:32:14.775Z",
+      "images": [
+        "/media/green.jpg",
+        "/media/green2.jpg"
+      ]
+    },
+    {
+      "id": "c2ee",
+      "title": "Modern Web Geliştirme Trendleri",
+      "content": "Web siteleri artık sadece statik metinlerden ibaret değil; kullanıcıyla etkileşime giren dinamik uygulamalara dönüştü. React, Vue ve Angular gibi JavaScript kütüphaneleri, web geliştirmede standart haline gelirken, \"Progressive Web Apps\" (PWA) teknolojisi sayesinde web siteleri mobil uygulama gibi çalışabiliyor. Kullanıcı deneyimi (UX) artık her şeyin merkezinde.\n\nAyrıca \"Headless CMS\" ve \"Jamstack\" mimarileri, web sitelerinin daha hızlı yüklenmesini ve daha güvenli olmasını sağlıyor. Geliştiriciler için araçlar sürekli değişse de, temel amaç değişmiyor: Kullanıcıya en hızlı, en erişilebilir ve en estetik deneyimi sunmak.",
+      "author": "selim",
+      "date": "2025-12-08T14:32:25.970Z",
+      "images": [
+        "/media/web.jpg",
+        "/media/web2.png"
+      ]
+    },
+    {
+      "id": "bde6",
+      "title": "Büyük Veri (Big Data) ve Analiz",
+      "content": "İnternet üzerindeki her tıklamamız, izlediğimiz her video ve yaptığımız her arama bir veri izi bırakıyor. Bu devasa veri yığınına \"Büyük Veri\" deniyor. Şirketler, bu verileri işleyip analiz ederek tüketici davranışlarını anlıyor, stratejilerini belirliyor ve geleceğe yönelik tahminlerde bulunuyor. Veri, dijital çağın petrolü olarak kabul ediliyor.\n\nAncak verinin sadece toplanması yetmiyor, doğru şekilde yorumlanması gerekiyor. Veri bilimciler ve analistler, karmaşık veri setlerinden anlamlı bilgiler çıkararak karar alma süreçlerini iyileştiriyor. Doğru analiz edilen veri, bir işletmeyi rakiplerinin önüne geçirecek en büyük güçtür.",
+      "author": "selim",
+      "date": "2025-12-08T14:32:37.323Z",
+      "images": [
+        "/media/bigdata2.jpg",
+        "/media/bigdata.jpeg",
+        "/media/bigdata3.jpg"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "03c6",
+      "postId": "c02d",
+      "user": "selim",
+      "text": "En iyi dil C#",
+      "date": "2025-12-08T14:34:31.550Z",
+      "images": []
+    },
+    {
+      "id": "4c8f",
+      "postId": "c02d",
+      "user": "selim_wb",
+      "text": "Bence de en iyi dil C#",
+      "date": "2025-12-08T16:32:02.737Z",
+      "images": []
+    }
+  ]
+}

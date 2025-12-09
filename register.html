@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Ol - Blog</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/media/icon.png"/>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Selim Aksakallı</a>
+            <div class="nav-links">
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="login.html">Giriş Yap</a>
+                <a href="index.html">Ana Sayfa</a>
+            </div>
+        </nav>
+
+        <div class="form-card auth-container">
+            <h3>Kayıt Ol</h3>
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Tam Adınız</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Şifre Tekrar</label>
+                    <input type="password" id="passwordConfirm" required>
+                </div>
+                <div class="form-group">
+                    <label>Biyografi (Opsiyonel)</label>
+                    <textarea id="bio" rows="3" placeholder="Kendiniz hakkında kısa bilgi..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%">Kayıt Ol</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px; color: #666;">
+                Zaten hesabın var mı? <a href="login.html" style="color: #667eea; font-weight: 600;">Giriş Yap</a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

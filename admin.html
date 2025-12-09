@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/media/icon.png"/>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Selim Aksakallı</a>
+            <div class="nav-links">
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <div id="nav-auth"></div>
+            </div>
+        </nav>
+
+        <div class="form-card" id="admin-posts">
+            <h3>📝 Yeni Yazı Ekle</h3>
+            <div class="form-group">
+                <label>Başlık</label>
+                <input type="text" id="postTitle" required>
+            </div>
+            <div class="form-group">
+                <label>İçerik</label>
+                <textarea id="postContent" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Fotoğraflar</label>
+                <div id="images-container"></div>
+                <button type="button" onclick="addImageInput()" class="btn-primary" style="background:#63b3ed; margin-top: 10px;">+ Resim Ekle</button>
+            </div>
+            
+            <button onclick="addPost()" class="btn-primary" style="width: 100%; margin-top: 20px;">Yayınla</button>
+        </div>
+
+        <div class="comments-section">
+            <h3>Mevcut Yazılar</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Başlık</th>
+                        <th>Tarih</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-posts-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="scripts.js"></script>
+    <script>
+        const u = JSON.parse(localStorage.getItem('currentUser'));
+        if(!u || u.role !== 'admin') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

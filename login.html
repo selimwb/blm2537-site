@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap - Blog</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/media/icon.png"/>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Selim Aksakallı</a>
+            <div class="nav-links">
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">İletişim</a>
+                <a href="index.html">Ana Sayfa</a>
+            </div>
+        </nav>
+
+        <div class="form-card auth-container">
+            <h3>Giriş Yap</h3>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%">Giriş Yap</button>
+            </form>
+            <p style="text-align: center; margin-top: 20px; color: #666;">
+                Hesabın yok mu? <a href="register.html" style="color: #667eea; font-weight: 600;">Kayıt Ol</a>
+            </p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

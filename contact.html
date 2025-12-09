@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/media/icon.png"/>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Selim Aksakallı</a>
+            <div class="nav-links">
+                <a href="blog.html">Blog</a>
+                <div id="nav-auth"></div>
+            </div>
+        </nav>
+
+        <div class="form-card">
+            <h3>İletişime Geç</h3>
+            <form onsubmit="alert('Mesajınız alındı!'); document.querySelector('form').reset(); return false;">
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Mesajınız</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <button class="btn-primary">Gönder</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
