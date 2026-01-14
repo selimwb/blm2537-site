@@ -1,28 +1,20 @@
 const API_URL = "http://localhost:3000";
 
-// ==========================================
-// GENEL BAŞLANGIÇ
-// ==========================================
 document.addEventListener('DOMContentLoaded', function() {
     checkAuth();
     setupLogout();
 
-    // Hangi sayfadayız kontrol et ve ona göre yükleme yap
     if (document.getElementById('blog-grid')) loadBlogPosts();
     if (document.getElementById('admin-posts')) loadAdminPosts();
     if (document.getElementById('login-form')) setupLogin();
     if (document.getElementById('register-form')) setupRegister();
     
-    // Yorum sayfası ve karakter sayacı
     if (document.getElementById('comments-list')) {
         getComments();
         setupCommentForm();
     }
 });
 
-// ==========================================
-// 1. KULLANICI İŞLEMLERİ (AUTH)
-// ==========================================
 function checkAuth() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
     const navAuth = document.getElementById('nav-auth');
@@ -78,7 +70,7 @@ function setupLogin() {
             }
         } catch (err) {
             console.error('Login error:', err);
-            alert('Sunucu hatası! json-server çalışıyor mu?');
+            alert('Sunucu hatası!');
         }
     });
 }
@@ -96,7 +88,6 @@ function setupRegister() {
         const passwordConfirm = document.getElementById('passwordConfirm').value;
         const bio = document.getElementById('bio').value.trim();
 
-        // Temel validasyon
         if (!fullName || !username || !password) {
             alert('Lütfen tüm gerekli alanları doldurun.');
             return;
@@ -113,7 +104,6 @@ function setupRegister() {
         }
 
         try {
-            // Kullanıcı adı çiftleşme kontrolü
             const checkRes = await fetch(`${API_URL}/users?username=${username}`);
             const existingUsers = await checkRes.json();
 
@@ -122,7 +112,6 @@ function setupRegister() {
                 return;
             }
 
-            // Yeni kullanıcı oluştur
             const newUser = { username, password, fullName, bio, role: 'user' };
             const res = await fetch(`${API_URL}/users`, {
                 method: 'POST',
@@ -145,29 +134,52 @@ function setupRegister() {
     });
 }
 
-// ==========================================
-// 2. BLOG İŞLEMLERİ
-// ==========================================
 async function loadBlogPosts() {
     const grid = document.getElementById('blog-grid');
     if (!grid) return;
-    
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const activeTag = urlParams.get('tag');
+
     grid.innerHTML = '<div style="text-align:center">Yazılar yükleniyor...</div>';
     
+    const header = document.querySelector('header h1');
+    if(activeTag && header) {
+        header.innerHTML = `Blog Yazılarım <span style="font-size:0.6em; color:#667eea">#${activeTag}</span>`;
+    }
+
     try {
         const res = await fetch(`${API_URL}/posts`);
         if (!res.ok) throw new Error('Yazılar yüklenemedi');
         
-        const posts = await res.json();
+        let posts = await res.json();
+        
+        if (activeTag) {
+            posts = posts.filter(post => 
+                post.tags && post.tags.includes(activeTag)
+            );
+        }
+
         grid.innerHTML = '';
         
         if (posts.length === 0) {
-            grid.innerHTML = '<p>Henüz hiç yazı yok.</p>';
+            grid.innerHTML = '<p style="grid-column: 1/-1; text-align:center;">Bu etikette henüz yazı yok veya sonuç bulunamadı.</p>';
+            if(activeTag) grid.innerHTML += `<div style="grid-column: 1/-1; text-align:center;"><a href="blog.html" class="btn-primary">Tüm Yazıları Gör</a></div>`;
             return;
         }
 
         posts.reverse().forEach(post => {
             const date = new Date(post.date).toLocaleDateString('tr-TR');
+
+            let tagsHtml = '';
+            if (post.tags && post.tags.length > 0) {
+                tagsHtml = '<div style="margin-top:10px; font-size:0.85rem; color:#667eea;">';
+                post.tags.forEach(tag => {
+                    tagsHtml += `<span style="margin-right:8px;">#${tag}</span>`;
+                });
+                tagsHtml += '</div>';
+            }
+
             grid.innerHTML += `
                 <div class="blog-card" style="cursor:pointer;" onclick="viewPostDetail('${post.id}')">
                     <h3>${post.title}</h3>
@@ -176,6 +188,7 @@ async function loadBlogPosts() {
                         <span>🖊️ ${post.author || 'Admin'}</span>
                         <span>📅 ${date}</span>
                     </div>
+                    ${tagsHtml}
                 </div>
             `;
         });
@@ -205,13 +218,10 @@ async function loadPostDetail(postId) {
                     <span>🖊️ ${post.author || 'Admin'}</span>
                     <span>📅 ${new Date(post.date).toLocaleDateString('tr-TR')}</span>
                 </div>
-                <div class="post-detail-content">
-                    ${post.content}
-                </div>
+                <div class="post-detail-content">${post.content}</div>
             </div>
         `;
 
-        // Resimleri göster
         const imagesContainer = document.getElementById('post-images');
         const imagesGallery = document.getElementById('images-gallery');
         
@@ -287,9 +297,6 @@ function viewPostDetail(postId) {
 }
 
 
-// ==========================================
-// 3. ADMİN İŞLEMLERİ
-// ==========================================
 async function addPost() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
     if (!user || user.role !== 'admin') {
@@ -299,13 +306,14 @@ async function addPost() {
 
     const title = document.getElementById('postTitle').value.trim();
     const content = document.getElementById('postContent').value.trim();
-
+    const tagsInput = document.getElementById('postTags').value;
+    const tags = tagsInput ? tagsInput.split(',').map(tag => tag.trim()) : [];
+    
     if (!title || !content) {
         alert('Lütfen tüm alanları doldurun.');
         return;
     }
 
-    // Resim adreslerini topla
     const images = [];
     const imageInputs = document.querySelectorAll('input[data-image-input]');
     imageInputs.forEach(input => {
@@ -319,7 +327,8 @@ async function addPost() {
             content, 
             author: user.username, 
             date: new Date().toISOString(),
-            images 
+            images ,
+            tags
         };
         const res = await fetch(`${API_URL}/posts`, {
             method: 'POST',
@@ -368,10 +377,6 @@ async function deletePost(id) {
     }
 }
 
-// ==========================================
-// 4. YORUM İŞLEMLERİ
-// ==========================================
-// YORUM SİSTEMİ DÜZELTMELERİ
 async function getComments(postId) {
     if (!postId) return;
     
@@ -457,7 +462,6 @@ function setupCommentForm() {
     const count = document.getElementById('charCount');
     const usernameGroup = document.getElementById('username-group');
     
-    // Eğer kullanıcı giriş yapmışsa isim alanını sakla
     if (usernameGroup) {
         usernameGroup.style.display = user ? 'none' : 'block';
     }

@@ -28,6 +28,11 @@
         "/media/ai.jpg",
         "/media/ai2.jpg",
         "/media/ai3.jpg"
+      ],
+      "tags": [
+        "Yapay Zeka",
+        "Teknoloji",
+        "Gelecek"
       ]
     },
     {
@@ -39,6 +44,10 @@
       "images": [
         "/media/cloud.jpg",
         "/media/cloud2.png"
+      ],
+      "tags": [
+        "Teknoloji",
+        "Yazılım"
       ]
     },
     {
@@ -50,6 +59,11 @@
       "images": [
         "/media/blockchain.webp",
         "/media/blockchain.jpg"
+      ],
+      "tags": [
+        "Teknoloji",
+        "Yazılım",
+        "Gelecek"
       ]
     },
     {
@@ -61,6 +75,10 @@
       "images": [
         "/media/python.jpg",
         "/media/python2.png"
+      ],
+      "tags": [
+        "Yazılım",
+        "Teknoloji"
       ]
     },
     {
@@ -72,6 +90,10 @@
       "images": [
         "/media/wearable.webp",
         "/media/wearable.avif"
+      ],
+      "tags": [
+        "Teknoloji",
+        "Gelecek"
       ]
     },
     {
@@ -83,6 +105,10 @@
       "images": [
         "/media/otonom.jpg",
         "/media/otonom2.jpg"
+      ],
+      "tags": [
+        "Teknoloji",
+        "Gelecek"
       ]
     },
     {
@@ -94,6 +120,10 @@
       "images": [
         "/media/quantum.jpg",
         "/media/quantum2.jpeg"
+      ],
+      "tags": [
+        "Teknoloji",
+        "Gelecek"
       ]
     },
     {
@@ -105,6 +135,9 @@
       "images": [
         "/media/green.jpg",
         "/media/green2.jpg"
+      ],
+      "tags": [
+        "Gelecek"
       ]
     },
     {
@@ -116,6 +149,10 @@
       "images": [
         "/media/web.jpg",
         "/media/web2.png"
+      ],
+      "tags": [
+        "Yazılım",
+        "Teknoloji"
       ]
     },
     {
@@ -128,6 +165,9 @@
         "/media/bigdata2.jpg",
         "/media/bigdata.jpeg",
         "/media/bigdata3.jpg"
+      ],
+      "tags": [
+        "Teknoloji"
       ]
     }
   ],
@@ -147,6 +187,13 @@
       "text": "Bence de en iyi dil C#",
       "date": "2025-12-08T16:32:02.737Z",
       "images": []
+    },
+    {
+      "id": "85e4",
+      "postId": "c02d",
+      "user": "selim",
+      "text": "test",
+      "date": "2026-01-14T16:06:35.541Z"
     }
   ]
 }

@@ -12,12 +12,33 @@
         <nav class="navbar">
             <a href="index.html" class="nav-brand">Selim Aksakallı</a>
             <div class="nav-links">
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">İletişim</a>
-                <div id="nav-auth"></div>
-            </div>
+    <a href="index.html">Ana Sayfa</a>
+    
+    <div class="dropdown">
+        <a href="blog.html" style="cursor: pointer;">Yazılar ▾</a>
+        <div class="dropdown-content">
+            <a href="blog.html">Tüm Yazılar</a>
+            <a href="blog.html?tag=Teknoloji">Teknoloji</a>
+            <a href="blog.html?tag=Yazılım">Yazılım</a>
+            <a href="blog.html?tag=Yapay Zeka">Yapay Zeka</a>
+            <a href="blog.html?tag=Gelecek">Gelecek</a>
+        </div>
+    </div>
+    <a href="contact.html">İletişim</a>
+    <a href="admin.html" id="admin-link" style="display:none; color:#ffd700;">Panel</a>
+    <div id="nav-auth"></div>
+</div>
         </nav>
     </div>
+    <header style="text-align: center; margin-top: 100px; color: white;">
+    <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Hoş Geldiniz</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
+Küçük yaşlardan beri yazılıma ilgi duyan biriyim. 2019 yılında lise öğretmenimin yönlendirmesiyle yazılım yolculuğuma başladım. Haydarpaşa Lisesi 85. dönem mezunuyum ve şu anda Ankara Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Yazılım geliştirme sürecinde C, C++, C#, SQL, .NET, Python, HTML, CSS ve XAML gibi teknolojilerle çalışıyorum. 2020 yılında Kodda Bilişim’de 6 aylık bir staj deneyimim oldu. Mesleki gelişimimin yanı sıra gitar çalmayı ve müzikle uğraşmayı da çok seviyorum. Bu blogda yazılım, teknoloji ve yapay zeka konularında düşüncelerimi ve deneyimlerimi paylaşmayı amaçlıyorum. 
+    </p>
+    <a href="blog.html" class="btn-primary" style="background: white; color: #667eea; padding: 15px 30px; font-size: 1.1rem;">
+        Yazıları Oku
+    </a>
+</header>
     <footer>
         <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
     </footer>

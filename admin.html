@@ -11,12 +11,23 @@
         <nav class="navbar">
             <a href="index.html" class="nav-brand">Selim Aksakallı</a>
             <div class="nav-links">
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">İletişim</a>
+                <a href="index.html">Ana Sayfa</a>
+    
+                <div class="dropdown">
+                    <a href="blog.html" style="cursor: pointer;">Yazılar ▾</a>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Tüm Yazılar</a>
+                        <a href="blog.html?tag=Teknoloji">Teknoloji</a>
+                        <a href="blog.html?tag=Yazılım">Yazılım</a>
+                        <a href="blog.html?tag=Yapay Zeka">Yapay Zeka</a>
+                        <a href="blog.html?tag=Gelecek">Gelecek</a>
+                    </div>
+                </div>
+                    <a href="contact.html">İletişim</a>
+                    <a href="admin.html" id="admin-link" style="display:none; color:#ffd700;">Panel</a>
                 <div id="nav-auth"></div>
             </div>
         </nav>
-
         <div class="form-card" id="admin-posts">
             <h3>📝 Yeni Yazı Ekle</h3>
             <div class="form-group">
@@ -27,7 +38,11 @@
                 <label>İçerik</label>
                 <textarea id="postContent" rows="5" required></textarea>
             </div>
-            
+            <div class="form-group">
+                <label>Etiketler (Virgülle ayırın)</label>
+                <input type="text" id="postTags" placeholder="Örn: Teknoloji, Yazılım, Gelecek">
+            </div>
+
             <div class="form-group">
                 <label>Fotoğraflar</label>
                 <div id="images-container"></div>
@@ -55,6 +70,7 @@
     <footer>
         <p style="text-align: center; color: #fff; padding: 20px 0;">&copy; 2025 Selim Aksakallı. Tüm hakları saklıdır.</p>
     </footer>
+   
     <script src="scripts.js"></script>
     <script>
         const u = JSON.parse(localStorage.getItem('currentUser'));
